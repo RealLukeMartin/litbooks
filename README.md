@@ -10,4 +10,6 @@ Example App using the MERN stack
 
 `cd litbooks/server`
 
+`npm install`
+
 `npm run dev`

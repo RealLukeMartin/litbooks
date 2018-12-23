@@ -8,8 +8,6 @@ Example App using the MERN stack
 
 `git clone git@github.com:RealLukeMartin/litbooks.git`
 
-`cd litbooks/server`
+`cd litbooks`
 
-`npm install`
-
-`npm run dev`
+`./install.sh`

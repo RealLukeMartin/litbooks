@@ -1,3 +1,4 @@
+import 'dotenv/config'; // Import environment variables
 import { ApolloServer } from 'apollo-server-express'; // Importing Apolloserver from the apollo package
 import express from 'express'; // Importing the express function needed to create a server
 
@@ -20,7 +21,7 @@ const graphqlServer = new ApolloServer({
 
 graphqlServer.applyMiddleware({ app }); // Attaching the graphql server to our express server
 
-const port = 4000; // defining the port we want to use
+const port = process.env.PORT; // defining the port we want to use
 
 // Calling our express server to start and listen on the designated port
 app.listen({ port }, () => {

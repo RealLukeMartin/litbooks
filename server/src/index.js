@@ -1,10 +1,18 @@
 import 'dotenv/config'; // Import environment variables
 import { ApolloServer } from 'apollo-server-express'; // Importing Apolloserver from the apollo package
 import express from 'express'; // Importing the express function needed to create a server
+import mongoose from 'mongoose'; // Import Mongoose
 
 // Importing our types and resolvers for graphql server
 import { typeDefs, resolvers } from './graphql';
 
+// Add mongoose connection
+mongoose
+  .connect('mongodb://localhost:27017')
+  .then(() => {
+    console.log('Connected to MongoDB');
+  });
+ 
 // Creating the express server app
 const app = express();
 
